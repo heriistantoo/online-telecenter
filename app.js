@@ -51,10 +51,8 @@ const db = require('./helpers/db.js');
 
   client.on('message', msg => {
     if (msg.body == '!ping') {
-      msg.reply('pong');
-    } else if (msg.body == 'good morning') {
-      msg.reply('selamat pagi');
-    } else if (msg.body == '!groups') {
+      msg.reply('Anda sudah terkoneksi dengan telecenter Dinas Kesehatan Kabupaten Blitar');
+    }  else if (msg.body == '!groups') {
       client.getChats().then(chats => {
         const groups = chats.filter(chat => chat.isGroup);
 
@@ -69,9 +67,22 @@ const db = require('./helpers/db.js');
           msg.reply(replyMsg);
         }
       });
+
+    } else if (msg.body == '1') {
+      msg.reply('1. Ketik angka *1.1* jika saya tidak mempunya gejala\n\n2. Ketik angka *1.2* jika saya mempunyai gejala (demam, batuk, pilek, lemas, dsb)');
+    } else if (msg.body == '1.1') {
+      msg.reply('Anda menjalani isolasi selama 10 HARI sejak isolasi mandiri atau sejak hasil swab keluar');
+    } else if (msg.body == '1.2') {
+      msg.reply('Anda menjalani isolasi selama 14 HARI sejak isolasi mandiri atau sejak hasil swab keluar');
+    } else if (msg.body == '2') {
+      msg.reply('1. Ketik angka *2.1* jika saya tidak mempunya gejala\n\n2. Ketik angka *2.2* jika saya mempunyai gejala batuk dan demam');
+    } else if (msg.body == '2.1') {
+      msg.reply('Anda harus banyak makan makanan yang bergizi, istirahat teratur dan mengkonsumsi multivitamin serta suplemen seperti vitamin C, vitamin D, Tablet Zinc. Jangan lupa untuk selalu menerapkan protokol kesehatan meski menjalani isolasi di rumah');
+    } else if (msg.body == '2.2') {
+      msg.reply('Anda disarankan untuk mendapatkan obat batuk yang dijual secara bebas di apotek untuk meredakan batuk dan paracetamol untuk meredakan demam. Jangan lupa untuk banyak makan makanan yang bergizi, istirahat teratur serta mengkonsumsi multivitamin dan suplemen seperti vitamin C, vitamin D, Tablet Zinc. Jangan lupa untuk selalu menerapkan protokol kesehatan meski menjalani isolasi di rumah');
     }
     else{
-      msg.reply('Selamat Datang di Telenceter Dinas Kesehatan Kabupaten Blitar');
+      msg.reply('SELAMAT DATANG DI TELECENTER DINAS KESEHATAN KABUPATEN BLITAR\n\n*MENU LAYANAN*\n\n1. Ketik angka *1* jika anda ingin mengetahui berapa lama anda harus menjalani isolasi\n\n2. Ketik angka *2* jika anda ingin mengetahui obat apa yang harus dikonsumsi selama menjalani masa isolasi\n\n3. Ketik *3* jika anda ingin mengetahui info edukasi terkait COVID19\n\n4. Ketik angka *4* jika anda mengalami sesak nafas atau gejala semakin memberat');
     }
   });
 
