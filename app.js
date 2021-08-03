@@ -77,7 +77,7 @@ const db = require('./helpers/db.js');
       '\n\n4. Orang dengan hasil tes antigen positif COVID-19 setelah kontak erat tanpa masker (tatap muka dengan penderita COVID-19 atau memiliki gejala COVID-19 dalam radius 1 meter selama 15 menit), bersentuhan fisik dengan pasien COVID-19 atau gejala mengarah COVID-19, merawat pasien COVID-19 atau gejala COVID-19 tanpa masker standar medis'+
       '\n\n5. Orang dengan hasil tes antigen positif COVID-19 dan baru kontak dengan 2 orang bergejala COVID-19'+
       '\n\n6. Orang yang belum tes antigen atau PCR COVID-19 tapi pernah kontak erat dengan pengidap COVID-19'+
-      '\n\nKetik angka *2* untuk melihat kategori gejala COVID-19');
+      '\n\nBalas angka *2* untuk melihat kategori gejala COVID-19');
     }
     else if (msg.body == '2') {
       msg.reply(MessageMedia.fromFilePath('./sources/gambar2.png'));
@@ -185,17 +185,18 @@ const db = require('./helpers/db.js');
       '\n2. dr. Izhaca ☎️ 085645185045');
     }
     else if (msg.body == 'Menu'){
-      msg.reply('Salam sehat, anda terhubung dengan Telecenter COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Telecenter ini dibuat sebagai tempat konsultasi yang diperuntukan bagi pasien positif COVID-19 yang saat ini sedang menjalani isolasi mandiri di rumah. Silahkan pilih menu kami yang sesuai dengan kondisi dan kebutuhan anda saat ini:'+
-      '\n\n👉 Ketik angka *1* jika anda ingin mengetahui kriteria orang yang harus menjalani isolasi mandiri'+
-      '\n\n👉 Ketik angka *2* jika anda ingin mengetahui kategori / kriteria pasien isolasi mandiri'+
-      '\n\n👉 Ketik angka *3* jika anda ingin mengetahui berapa lama masa isolasi yang harus dilakukan'+
-      '\n\n👉 Ketik angka *4* jika anda ingin mengetahui apa yang harus dilakukan selama menjalani masa isolasi mandiri'+
-      '\n\n👉 Ketik angka *5* jika anda ingin mengetahui obat apa yang harus dikonsumsi selama masa isolasi mandiri'+
-      '\n\n👉 Ketik angka *6* jika anda ingin mengetahui info edukasi terkait COVID-19'+
-      '\n\n👉 Ketik angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
+      msg.reply('Silahkan balas dengan angka sesuai menu di bawah ini jika anda butuh informasi layanan lebih lanjut:'+
+      '\n\n👉 Balas angka *1* jika anda ingin mengetahui kriteria orang yang harus menjalani isolasi mandiri'+
+      '\n\n👉 Balas angka *2* jika anda ingin mengetahui kategori / kriteria pasien isolasi mandiri'+
+      '\n\n👉 Balas angka *3* jika anda ingin mengetahui berapa lama masa isolasi yang harus dilakukan'+
+      '\n\n👉 Balas angka *4* jika anda ingin mengetahui apa yang harus dilakukan selama menjalani masa isolasi mandiri'+
+      '\n\n👉 Balas angka *5* jika anda ingin mengetahui obat apa yang harus dikonsumsi selama masa isolasi mandiri'+
+      '\n\n👉 Balas angka *6* jika anda ingin mengetahui info edukasi terkait COVID-19'+
+      '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
       );
     } else{
-      msg.reply('Halo apa kabar. Selamat datang di Telecenter COVID-19, ketik *Menu* untuk melihat daftar layanan');
+      msg.reply('Salam Sehat, selamat datang di Telecenter COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Telecenter ini dibuat sebagai tempat konsultasi yang diperuntukan bagi pasien positif COVID-19 yang saat ini sedang menjalani isolasi mandiri di rumah.'+
+      '\nBalas dengan pesan *Menu* untuk melihat daftar layanan.');
     }
   });
 
