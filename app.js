@@ -51,7 +51,7 @@ const db = require('./helpers/db.js');
 
   client.on('message', msg => {
     if (msg.body == '!ping') {
-      msg.reply('Anda sudah terkoneksi dengan telecenter Dinas Kesehatan Kabupaten Blitar');
+      msg.reply('Anda sudah terkoneksi dengan Iso Konsul Dinas Kesehatan Kabupaten Blitar');
     }  else if (msg.body == '!groups') {
       client.getChats().then(chats => {
         const groups = chats.filter(chat => chat.isGroup);
@@ -195,7 +195,7 @@ const db = require('./helpers/db.js');
       '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
       );
     } else{
-      msg.reply('Salam Sehat, selamat datang di Telecenter COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Telecenter ini dibuat sebagai tempat konsultasi yang diperuntukan bagi pasien positif COVID-19 yang saat ini sedang menjalani isolasi mandiri di rumah.'+
+      msg.reply('Salam Sehat, selamat datang di Iso Konsul COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Iso Konsul ini dibuat sebagai tempat konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah.'+
       '\nBalas dengan pesan *Menu* untuk melihat daftar layanan.');
     }
   });
@@ -215,13 +215,13 @@ const db = require('./helpers/db.js');
     });
 
     client.on('ready', () => {
-      socket.emit('ready', 'Whatsapp Telecenter is ready!');
-      socket.emit('message', 'Whatsapp Telecenter is ready!');
+      socket.emit('ready', 'Whatsapp Iso Konsul is ready!');
+      socket.emit('message', 'Whatsapp Iso Konsul is ready!');
     });
 
     client.on('authenticated', (session) => {
-      socket.emit('authenticated', 'Whatsapp Telecenter is authenticated!');
-      socket.emit('message', 'Whatsapp Telecenter is authenticated!');
+      socket.emit('authenticated', 'Whatsapp Iso Konusl is authenticated!');
+      socket.emit('message', 'Whatsapp Iso Konsul is authenticated!');
       console.log('AUTHENTICATED', session);
       // Save session to DB
       db.saveSession(session);
@@ -232,7 +232,7 @@ const db = require('./helpers/db.js');
     });
 
     client.on('disconnected', (reason) => {
-      socket.emit('message', 'Whatsapp Telecenter is disconnected!');
+      socket.emit('message', 'Whatsapp Iso Konsul is disconnected!');
       // Remove session from DB
       db.removeSession();
       client.destroy();
