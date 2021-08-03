@@ -124,65 +124,65 @@ const db = require('./helpers/db.js');
     else if (msg.body == '7') {
       msg.reply('Tenaga medis yang dapat melayani konsultasi:'+
       '\n\n*PUSKESMAS BACEM*'+
-      '\n\n1. dr. Purna ☎️ 6281334514615'+
+      '\n\n1. dr. Purna ☎️ 081334514615'+
       '\n\n*PUSKESMAS BAKUNG*'+
-      '\n\n1. dr. Ichsan ☎️ 628113000523'+
-      '\n2. dr. Hendri ☎️ 6285648498187'+
+      '\n\n1. dr. Ichsan ☎️ 08113000523'+
+      '\n2. dr. Hendri ☎️ 085648498187'+
       '\n\n*PUSKESMAS BINANGUN*'+
-      '\n\n1. dr. Dewi ☎️ 6282131978797'+
+      '\n\n1. dr. Dewi ☎️ 082131978797'+
       '\n\n*PUSKESMAS BORO*'+
-      '\n\n1. dr. Zuniarsih ☎️ 6285649440150'+
+      '\n\n1. dr. Zuniarsih ☎️ 085649440150'+
       '\n\n*PUSKESMAS DOKO*'+
-      '\n\n1. dr. Anggrita ☎️ 6281553636000'+
-      '\n2. dr. Eko ☎️ 6281328578032'+
+      '\n\n1. dr. Anggrita ☎️ 081553636000'+
+      '\n2. dr. Eko ☎️ 081328578032'+
       '\n\n*PUSKESMAS GANDUSARI*'+
-      '\n\n1. dr. Muhammad Farid ☎️ 6282231922108'+
-      '\n2. dr. Vladimir ☎️ 628113291992'+
+      '\n\n1. dr. Muhammad Farid ☎️ 082231922108'+
+      '\n2. dr. Vladimir ☎️ 08113291992'+
       '\n\n*PUSKESMAS GARUM*'+
-      '\n\n1. dr. Arne ☎️ 6281334767659'+
-      '\n2. dr. Arsinta ☎️ 6282134868365'+
+      '\n\n1. dr. Arne ☎️ 081334767659'+
+      '\n2. dr. Arsinta ☎️ 082134868365'+
       '\n\n*PUSKESMAS KADEMANGAN*'+
-      '\n\n1. dr. Silvia ☎️ 628563085300'+
-      '\n2. dr. Rurin ☎️ 6285731950306'+
+      '\n\n1. dr. Silvia ☎️ 08563085300'+
+      '\n2. dr. Rurin ☎️ 085731950306'+
       '\n\n*PUSKESMAS KANIGORO*'+
-      '\n\n1. dr. Deny ☎️ 6282282195339'+
+      '\n\n1. dr. Deny ☎️ 082282195339'+
       '\n\n*PUSKESMAS KESAMBEN*'+
-      '\n\n1. dr. Rofiq ☎️ 6285234287530'+
-      '\n2. dr. Evi ☎️ 6282231649558'+
+      '\n\n1. dr. Rofiq ☎️ 085234287530'+
+      '\n2. dr. Evi ☎️ 082231649558'+
       '\n\n*PUSKESMAS NGLEGOK*'+
-      '\n\n1. dr. Kentik ☎️ 6281334533444'+
+      '\n\n1. dr. Kentik ☎️ 081334533444'+
       '\n\n*PUSKESMAS PANGGUNGREJO*'+
-      '\n\n1. dr. Yeni ☎️ 628121669683'+
+      '\n\n1. dr. Yeni ☎️ 08121669683'+
       '\n\n*PUSKESMAS PONGGOK*'+
-      '\n\n1. dr. Rabitha ☎️ 6285871189997'+
-      '\n2. dr. Inaka ☎️ 6282141117800'+
+      '\n\n1. dr. Rabitha ☎️ 085871189997'+
+      '\n2. dr. Inaka ☎️ 082141117800'+
       '\n\n*PUSKESMAS SANANKULON*'+
-      '\n\n1. dr. Evi ☎️ 6287753810268'+
+      '\n\n1. dr. Evi ☎️ 087753810268'+
       '\n\n*PUSKESMAS SELOPURO*'+
-      '\n\n1. dr. Adi ☎️ 628123310818'+
+      '\n\n1. dr. Adi ☎️ 08123310818'+
       '\n\n*PUSKESMAS SLUMBUNG*'+
-      '\n\n1. dr. Agus ☎️ 6282230369373'+
+      '\n\n1. dr. Agus ☎️ 082230369373'+
       '\n\n*PUSKESMAS SRENGAT*'+
-      '\n\n1. dr. Puspa ☎️ 6281235134910'+
+      '\n\n1. dr. Puspa ☎️ 081235134910'+
       '\n\n*PUSKESMAS SUTOJAYAN*'+
-      '\n\n1. dr. Erwin ☎️ 6289646399338'+
-      '\n2. dr. Mohammad Rizza ☎️ 6282233666511'+
+      '\n\n1. dr. Erwin ☎️ 089646399338'+
+      '\n2. dr. Mohammad Rizza ☎️ 082233666511'+
       '\n\n*PUSKESMAS TALUN*'+
-      '\n\n1. dr. Desy ☎️ 6281231735567'+
+      '\n\n1. dr. Desy ☎️ 081231735567'+
       '\n\n*PUSKESMAS UDANAWU*'+
-      '\n\n1. dr. Yunike ☎️ 628123273610'+
-      '\n2. dr. Bagus ☎️ 6285806952236'+
+      '\n\n1. dr. Yunike ☎️ 08123273610'+
+      '\n2. dr. Bagus ☎️ 085806952236'+
       '\n\n*PUSKESMAS WATES*'+
-      '\n\n1. dr. Indah ☎️ 6282231155373'+
-      '\n2. dr. Ariesta ☎️ 6281257447115'+
+      '\n\n1. dr. Indah ☎️ 082231155373'+
+      '\n2. dr. Ariesta ☎️ 081257447115'+
       '\n\n*PUSKESMAS WLINGI*'+
-      '\n\n1. dr. Ainu ☎️ 6282145044491'+
-      '\n2. dr. Syamsudduha ☎️ 6282329442984'+
+      '\n\n1. dr. Ainu ☎️ 082145044491'+
+      '\n2. dr. Syamsudduha ☎️ 082329442984'+
       '\n\n*PUSKESMAS WONODADI*'+
-      '\n\n1. dr. Edwin ☎️ 6281238392569'+
+      '\n\n1. dr. Edwin ☎️ 081238392569'+
       '\n\n*PUSKESMAS WONOTIRTO*'+
-      '\n\n1. dr. Oscar ☎️ 6281559800096'+
-      '\n2. dr. Izhaca ☎️ 6285645185045');
+      '\n\n1. dr. Oscar ☎️ 081559800096'+
+      '\n2. dr. Izhaca ☎️ 085645185045');
     }
     else if (msg.body == 'Menu'){
       msg.reply('Salam sehat, anda terhubung dengan Telecenter COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Telecenter ini dibuat sebagai tempat konsultasi yang diperuntukan bagi pasien positif COVID-19 yang saat ini sedang menjalani isolasi mandiri di rumah. Silahkan pilih menu kami yang sesuai dengan kondisi dan kebutuhan anda saat ini:'+
