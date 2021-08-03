@@ -68,21 +68,134 @@ const db = require('./helpers/db.js');
         }
       });
 
-    } else if (msg.body == '1') {
-      msg.reply('1. Ketik angka *1.1* jika saya tidak mempunya gejala\n\n2. Ketik angka *1.2* jika saya mempunyai gejala (demam, batuk, pilek, lemas, dsb)');
-    } else if (msg.body == '1.1') {
-      msg.reply('Anda menjalani isolasi selama 10 HARI sejak isolasi mandiri atau sejak hasil swab keluar');
-    } else if (msg.body == '1.2') {
-      msg.reply('Anda menjalani isolasi selama 14 HARI sejak isolasi mandiri atau sejak hasil swab keluar');
-    } else if (msg.body == '2') {
-      msg.reply('1. Ketik angka *2.1* jika saya tidak mempunya gejala\n\n2. Ketik angka *2.2* jika saya mempunyai gejala batuk dan demam');
-    } else if (msg.body == '2.1') {
-      msg.reply('Anda harus banyak makan makanan yang bergizi, istirahat teratur dan mengkonsumsi multivitamin serta suplemen seperti vitamin C, vitamin D, Tablet Zinc. Jangan lupa untuk selalu menerapkan protokol kesehatan meski menjalani isolasi di rumah');
-    } else if (msg.body == '2.2') {
-      msg.reply('Anda disarankan untuk mendapatkan obat batuk yang dijual secara bebas di apotek untuk meredakan batuk dan paracetamol untuk meredakan demam. Jangan lupa untuk banyak makan makanan yang bergizi, istirahat teratur serta mengkonsumsi multivitamin dan suplemen seperti vitamin C, vitamin D, Tablet Zinc. Jangan lupa untuk selalu menerapkan protokol kesehatan meski menjalani isolasi di rumah');
+    } 
+    else if (msg.body == '1') {
+      msg.reply('*Kriteria seseorang yang seharusnya menjalani isolasi mandiri:*'+
+      '\n\n1. Orang dengan hasil tes antigen atau PCR positif COVID-19'+
+      '\n\n2. Orang dengan hasil tes PCR positif COVID-19, baik bergejala ringan maupun tanpa gejala'+
+      '\n\n3. Orang dengan hasil tes antigen positif COVID-19, dengan minimal 3 gejala COVID-19 ringan'+
+      '\n\n4. Orang dengan hasil tes antigen positif COVID-19 setelah kontak erat tanpa masker (tatap muka dengan penderita COVID-19 atau memiliki gejala COVID-19 dalam radius 1 meter selama 15 menit), bersentuhan fisik dengan pasien COVID-19 atau gejala mengarah COVID-19, merawat pasien COVID-19 atau gejala COVID-19 tanpa masker standar medis'+
+      '\n\n5. Orang dengan hasil tes antigen positif COVID-19 dan baru kontak dengan 2 orang bergejala COVID-19'+
+      '\n\n6. Orang yang belum tes antigen atau PCR COVID-19 tapi pernah kontak erat dengan pengidap COVID-19'+
+      '\n\nKetik angka *2* untuk melihat kategori gejala COVID-19');
     }
-    else{
-      msg.reply('SELAMAT DATANG DI TELECENTER DINAS KESEHATAN KABUPATEN BLITAR\n\n*MENU LAYANAN*\n\n1. Ketik angka *1* jika anda ingin mengetahui berapa lama anda harus menjalani isolasi\n\n2. Ketik angka *2* jika anda ingin mengetahui obat apa yang harus dikonsumsi selama menjalani masa isolasi\n\n3. Ketik *3* jika anda ingin mengetahui info edukasi terkait COVID19\n\n4. Ketik angka *4* jika anda mengalami sesak nafas atau gejala semakin memberat');
+    else if (msg.body == '2') {
+      msg.reply(MessageMedia.fromFilePath('./sources/gambar2.png'));
+    } 
+    else if (msg.body == '3') {
+      msg.reply('*Lama isolasi mandiri pasien COVID-19 dapat dibedakan menjadi 3:*'+
+      '\n\n1. Pasien *TANPA GEJALA* COVID-19 membutuhkan *10 Hari* sejak tes antigen atau PCR positif COVID-19'+
+      '\n\n2. Pasien *GEJALA RINGAN* COVID-19 membutuhkan *10 Hari* ditambah *3 Hari* sejak bebas demam dan gangguan pernafasan'+
+      '\n\n3. Orang *KONTAK ERAT* dengan pasien COVID-19 membutuhkan *14 Hari* sejak kontak pertama (Sebaiknya dipastikan dengan RT PCR)');
+    }
+    else if (msg.body == '4') {
+      msg.reply(MessageMedia.fromFilePath('./sources/gambar1.png'));
+    }
+    else if (msg.body == '5') {
+      msg.reply('Bagi pasien positif COVID-19 *TANPA GEJALA* obat yang harus dikonsumsi adalah:'+
+      '\n\n1. Vitamin C 250-500 mg 1x1 Tablet selama 10 Hari'+
+      '\n\n2. Vitamin D3 1000 IU 1x1 Tablet selama 10 Hari'+
+      '\n\n3. Zinc 20 mg 1x1 Tablet selama 10 Hari');
+
+      msg.reply('Bagi pasien positif COVID-19 *GEJALA RINGAN* obat yang harus dikonsumsi adalah:'+
+      '\n\n1. Antibiotik : Azitromycin 500 mg 1x1 selama 5-10 hari'+
+      '\n\n2. Antivirus : Favipiravir (Avigan-Indofarma) 600 mg 2x1 selama 5 hari'+
+      '\n\nDua obat di atas sulit dicari dan saat ini membutuhkan resep, sehingga tidak mengapa jika tidak mendapatkan keduanya. Kecuali anda demam lebih dari 3 hari, silahkan melakukan konsultasi dengan dokter terdekat untuk mendapatkan resep antibiotik/antivirus'+
+      '\n\n3. Anti Batuk : Acetylsystein 200 mg 3x1 dan Ifarysl 3x1 masing-masing selama 5 Hari'+
+      '\n\n4. Anti Radang : Dexamethasone 0.5 2x1 Tablet selama 5 Hari'+
+      '\n\n5. Penurun Panas : Paracetamol/Dumin/Panadol/Sanmol 500 mg 3x1 selama 5 Hari (Jika Demam)'+
+      '\n\n6. Vit E : Natur E Hijau/Orange 1x1'+
+      '\n\n7. Vit B6 dan B12 : Neorobion 1x1'+
+      '\n\n8. Vit D3 dan Zinc 1x1'+
+      '\n\n9. Vit C 250 mg 1x1'+
+      '\n\nVitamin nomor 6 hingga 9 di atas dapat langsung dibeli dalam bentuk multivitamin yang berisi vitamin-vitamin tersebut, atau dibeli secara terpisah'+
+      '\n\n10. Usahakan berjemur di bawah sinar matahari pagi setidaknya selama 10-15 Menit pada pukul 09.00 - 10.30 WIB');
+    
+      msg.reply('Bagi pasien positif COVID-19 *GEJALA SEDANG, BERAT-KRITIS* harap segera mendapatkan bantuan oksigen dan pelayanan kesehatan di Rumah Sakit'+
+      '\n\nJangan panik, selalu berdoa, tetap bersyukur, semangat, dan selalu gembira. Karena hati yang gembira adalah obat. Selalu percaya dan yakin dengan kesembuhan. 🙏🙏🙏');
+    
+    }
+    else if (msg.body == '6') {
+      msg.reply('Berikut media informasi yang dapat diakses:'+
+      '\n\n1. https://tanggapcorona.blitarkab.go.id/'+
+      '\n\n2. https://www.youtube.com/channel/UCTkLICaGftR_fksyLFKdanw/videos'+
+      '\n\n3. https://tanggapcorona.blitarkab.go.id/commandcenter/');
+    }
+    else if (msg.body == '7') {
+      msg.reply('Tenaga medis yang dapat melayani konsultasi:'+
+      '\n\n*PUSKESMAS BACEM*'+
+      '\n\n1. dr. Purna ☎️ 6281334514615'+
+      '\n\n*PUSKESMAS BAKUNG*'+
+      '\n\n1. dr. Ichsan ☎️ 628113000523'+
+      '\n2. dr. Hendri ☎️ 6285648498187'+
+      '\n\n*PUSKESMAS BINANGUN*'+
+      '\n\n1. dr. Dewi ☎️ 6282131978797'+
+      '\n\n*PUSKESMAS BORO*'+
+      '\n\n1. dr. Zuniarsih ☎️ 6285649440150'+
+      '\n\n*PUSKESMAS DOKO*'+
+      '\n\n1. dr. Anggrita ☎️ 6281553636000'+
+      '\n2. dr. Eko ☎️ 6281328578032'+
+      '\n\n*PUSKESMAS GANDUSARI*'+
+      '\n\n1. dr. Muhammad Farid ☎️ 6282231922108'+
+      '\n2. dr. Vladimir ☎️ 628113291992'+
+      '\n\n*PUSKESMAS GARUM*'+
+      '\n\n1. dr. Arne ☎️ 6281334767659'+
+      '\n2. dr. Arsinta ☎️ 6282134868365'+
+      '\n\n*PUSKESMAS KADEMANGAN*'+
+      '\n\n1. dr. Silvia ☎️ 628563085300'+
+      '\n2. dr. Rurin ☎️ 6285731950306'+
+      '\n\n*PUSKESMAS KANIGORO*'+
+      '\n\n1. dr. Deny ☎️ 6282282195339'+
+      '\n\n*PUSKESMAS KESAMBEN*'+
+      '\n\n1. dr. Rofiq ☎️ 6285234287530'+
+      '\n2. dr. Evi ☎️ 6282231649558'+
+      '\n\n*PUSKESMAS NGLEGOK*'+
+      '\n\n1. dr. Kentik ☎️ 6281334533444'+
+      '\n\n*PUSKESMAS PANGGUNGREJO*'+
+      '\n\n1. dr. Yeni ☎️ 628121669683'+
+      '\n\n*PUSKESMAS PONGGOK*'+
+      '\n\n1. dr. Rabitha ☎️ 6285871189997'+
+      '\n2. dr. Inaka ☎️ 6282141117800'+
+      '\n\n*PUSKESMAS SANANKULON*'+
+      '\n\n1. dr. Evi ☎️ 6287753810268'+
+      '\n\n*PUSKESMAS SELOPURO*'+
+      '\n\n1. dr. Adi ☎️ 628123310818'+
+      '\n\n*PUSKESMAS SLUMBUNG*'+
+      '\n\n1. dr. Agus ☎️ 6282230369373'+
+      '\n\n*PUSKESMAS SRENGAT*'+
+      '\n\n1. dr. Puspa ☎️ 6281235134910'+
+      '\n\n*PUSKESMAS SUTOJAYAN*'+
+      '\n\n1. dr. Erwin ☎️ 6289646399338'+
+      '\n2. dr. Mohammad Rizza ☎️ 6282233666511'+
+      '\n\n*PUSKESMAS TALUN*'+
+      '\n\n1. dr. Desy ☎️ 6281231735567'+
+      '\n\n*PUSKESMAS UDANAWU*'+
+      '\n\n1. dr. Yunike ☎️ 628123273610'+
+      '\n2. dr. Bagus ☎️ 6285806952236'+
+      '\n\n*PUSKESMAS WATES*'+
+      '\n\n1. dr. Indah ☎️ 6282231155373'+
+      '\n2. dr. Ariesta ☎️ 6281257447115'+
+      '\n\n*PUSKESMAS WLINGI*'+
+      '\n\n1. dr. Ainu ☎️ 6282145044491'+
+      '\n2. dr. Syamsudduha ☎️ 6282329442984'+
+      '\n\n*PUSKESMAS WONODADI*'+
+      '\n\n1. dr. Edwin ☎️ 6281238392569'+
+      '\n\n*PUSKESMAS WONOTIRTO*'+
+      '\n\n1. dr. Oscar ☎️ 6281559800096'+
+      '\n2. dr. Izhaca ☎️ 6285645185045');
+    }
+    else if (msg.body == 'Menu'){
+      msg.reply('Salam sehat, anda terhubung dengan Telecenter COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Telecenter ini dibuat sebagai tempat konsultasi yang diperuntukan bagi pasien positif COVID-19 yang saat ini sedang menjalani isolasi mandiri di rumah. Silahkan pilih menu kami yang sesuai dengan kondisi dan kebutuhan anda saat ini:'+
+      '\n\n👉 Ketik angka *1* jika anda ingin mengetahui kriteria orang yang harus menjalani isolasi mandiri'+
+      '\n\n👉 Ketik angka *2* jika anda ingin mengetahui kategori / kriteria pasien isolasi mandiri'+
+      '\n\n👉 Ketik angka *3* jika anda ingin mengetahui berapa lama masa isolasi yang harus dilakukan'+
+      '\n\n👉 Ketik angka *4* jika anda ingin mengetahui apa yang harus dilakukan selama menjalani masa isolasi mandiri'+
+      '\n\n👉 Ketik angka *5* jika anda ingin mengetahui obat apa yang harus dikonsumsi selama masa isolasi mandiri'+
+      '\n\n👉 Ketik angka *6* jika anda ingin mengetahui info edukasi terkait COVID-19'+
+      '\n\n👉 Ketik angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
+      );
+    } else{
+      msg.reply('Halo apa kabar. Selamat datang di Telecenter COVID-19, ketik *Menu* untuk melihat daftar layanan');
     }
   });
 
