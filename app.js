@@ -92,7 +92,7 @@ const db = require('./helpers/db.js');
       msg.reply(MessageMedia.fromFilePath('./sources/gambar1.png'));
     }
     else if (msg.body == '5') {
-      msg.reply('Bagi pasien positif COVID-19 *TANPA GEJALA* obat yang harus dikonsumsi adalah:'+
+      msg.reply('Bagi pasien positif COVID-19 *TANPA GEJALA* obat yang dapat dikonsumsi adalah:'+
       '\n\n1. Vitamin C 250-500 mg 1x1 Tablet selama 10 Hari'+
       '\n\n2. Vitamin D3 1000 IU 1x1 Tablet selama 10 Hari'+
       '\n\n3. Zinc 20 mg 1x1 Tablet selama 10 Hari');
@@ -189,7 +189,7 @@ const db = require('./helpers/db.js');
       '\n\n👉 Balas angka *2* jika anda ingin mengetahui kategori / kriteria pasien isolasi mandiri'+
       '\n\n👉 Balas angka *3* jika anda ingin mengetahui berapa lama masa isolasi yang harus dilakukan'+
       '\n\n👉 Balas angka *4* jika anda ingin mengetahui apa yang harus dilakukan selama menjalani masa isolasi mandiri'+
-      '\n\n👉 Balas angka *5* jika anda ingin mengetahui obat apa yang harus dikonsumsi selama masa isolasi mandiri'+
+      '\n\n👉 Balas angka *5* jika anda ingin mengetahui obat apa yang dapat dikonsumsi selama masa isolasi mandiri'+
       '\n\n👉 Balas angka *6* jika anda ingin mengetahui info edukasi terkait COVID-19'+
       '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
       );
