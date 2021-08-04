@@ -51,7 +51,7 @@ const db = require('./helpers/db.js');
 
   client.on('message', msg => {
     if (msg.body == '!ping') {
-      msg.reply('Anda sudah terkoneksi dengan Iso Konsul Dinas Kesehatan Kabupaten Blitar');
+      msg.reply('Anda sudah terkoneksi dengan ISO KONSUL Dinas Kesehatan Kabupaten Blitar');
     }  else if (msg.body == '!groups') {
       client.getChats().then(chats => {
         const groups = chats.filter(chat => chat.isGroup);
@@ -97,15 +97,14 @@ const db = require('./helpers/db.js');
       '\n\n2. Vitamin D3 1000 IU 1x1 Tablet selama 10 Hari'+
       '\n\n3. Zinc 20 mg 1x1 Tablet selama 10 Hari');
 
-      msg.reply('Bagi pasien positif COVID-19 *GEJALA RINGAN* obat yang harus dikonsumsi adalah:'+
-      '\n\n1. Antibiotik : Azitromycin 500 mg 1x1 selama 5-10 hari'+
-      '\n\n2. Antivirus : Favipiravir (Avigan-Indofarma) 600 mg 2x1 selama 5 hari'+
-      '\n\nDua obat di atas sulit dicari dan saat ini membutuhkan resep, sehingga tidak mengapa jika tidak mendapatkan keduanya. Kecuali anda demam lebih dari 3 hari, silahkan melakukan konsultasi dengan dokter terdekat untuk mendapatkan resep antibiotik/antivirus'+
-      '\n\n3. Anti Batuk : Acetylsystein 200 mg 3x1 dan Ifarysl 3x1 masing-masing selama 5 Hari'+
+      msg.reply('Bagi pasien positif COVID-19 *GEJALA RINGAN* obat yang dapat dikonsumsi adalah:'+
+      '\n\n1. Antibiotik (Harus disertai dengan resep dokter, silahkan hubungi dokter)'+
+      '\n\n2. Antivirus (Harus disertai dengan resep dokter, silahkan hubungi dokter)'+
+      '\n\n3. Anti Batuk : Acetylsystein 200 mg 3x1, Bromhexine 3x1 masing-masing selama 5 Hari'+
       '\n\n4. Anti Radang : Dexamethasone 0.5 2x1 Tablet selama 5 Hari'+
-      '\n\n5. Penurun Panas : Paracetamol/Dumin/Panadol/Sanmol 500 mg 3x1 selama 5 Hari (Jika Demam)'+
-      '\n\n6. Vit E : Natur E Hijau/Orange 1x1'+
-      '\n\n7. Vit B6 dan B12 : Neorobion 1x1'+
+      '\n\n5. Penurun Panas : Paracetamol 500 mg 3x1 selama 5 Hari (Jika Demam)'+
+      '\n\n6. Vit E 1x1'+
+      '\n\n7. Vit B Kompleks 1x1'+
       '\n\n8. Vit D3 dan Zinc 1x1'+
       '\n\n9. Vit C 250 mg 1x1'+
       '\n\nVitamin nomor 6 hingga 9 di atas dapat langsung dibeli dalam bentuk multivitamin yang berisi vitamin-vitamin tersebut, atau dibeli secara terpisah'+
@@ -195,7 +194,7 @@ const db = require('./helpers/db.js');
       '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
       );
     } else{
-      msg.reply('Salam Sehat, selamat datang di Iso Konsul COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. Iso Konsul ini dibuat sebagai tempat konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah.'+
+      msg.reply('Salam Sehat, selamat datang di *ISO KONSUL* COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. ISO KONSUL ini dibuat sebagai sarana informasi dan konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah.'+
       '\nBalas dengan pesan *Menu* untuk melihat daftar layanan.');
     }
   });
