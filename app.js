@@ -183,6 +183,16 @@ const db = require('./helpers/db.js');
       '\n\n1. dr. Oscar ☎️ 081559800096'+
       '\n2. dr. Izhaca ☎️ 085645185045');
     }
+    else if (msg.body == '8') {
+      msg.reply('*Tindakan yang harus dilakukan setelah masa isolasi selesai / dinyatakan sembuh dari COVID-19:*'+
+      '\n\n1. Boleh kembali beraktivitas seperti sediakala dengan tetap mematuhi protokol kesehatan'+
+      '\n\n2. Bila masih merasa lemas, hindari beraktivitas secara normal. Lakukan peningkatan intentistas aktivitas secara bertahap mulai dari ringan hingga kondisi kembali normal'+
+      '\n\n3. Bila masih merasakan gejala sisa, dapat melakukan pemeriksaan secara rutin ke dokter sesuai gejala yang dialami'+
+      '\n\n4. Bila sudah tidak ada gejala sisa, dapat dilakukan check up rutin untuk melihat adakah gangguan organ yang diakibatkan oleh COVID-19'+
+      '\n\n5. Bila sudah dinyatakan sembuh, tidak perlu melakukan tes swab PCR berkala bila tidak ada indikasi terinfeksi kembali (Reinfeksi)'+
+      '\n\n6. Tetap patuhi protokol kesehatan dan jaga imun tubuh karena masih terdapat kemungkinan terinfeksi kembali'
+        );
+    }
     else if (msg.body == 'Menu'){
       msg.reply('Silahkan balas dengan angka sesuai menu di bawah ini jika anda butuh informasi layanan lebih lanjut:'+
       '\n\n👉 Balas angka *1* jika anda ingin mengetahui kriteria orang yang harus menjalani isolasi mandiri'+
@@ -191,7 +201,8 @@ const db = require('./helpers/db.js');
       '\n\n👉 Balas angka *4* jika anda ingin mengetahui apa yang harus dilakukan selama menjalani masa isolasi mandiri'+
       '\n\n👉 Balas angka *5* jika anda ingin mengetahui obat apa yang dapat dikonsumsi selama masa isolasi mandiri'+
       '\n\n👉 Balas angka *6* jika anda ingin mengetahui info edukasi terkait COVID-19'+
-      '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'
+      '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'+
+      '\n\n👉 Balas angka *8* jika anda ingin mengetahui apa saja yang harus dilakukan setelah masa isolasi selesai / telah dinyatakan sembuh dari COVID-19'
       );
     } else{
       msg.reply('Salam Sehat, selamat datang di *ISO KONSUL* COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. ISO KONSUL ini dibuat sebagai sarana informasi dan konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah.'+
