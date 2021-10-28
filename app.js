@@ -193,6 +193,63 @@ const db = require('./helpers/db.js');
       '\n\n6. Tetap patuhi protokol kesehatan dan jaga imun tubuh karena masih terdapat kemungkinan terinfeksi kembali'
         );
     }
+    else if (msg.body == '9') {
+      msg.reply('*Untuk bisa mendapatkan vaksinasi ada beberapa syarat yang perlu dipenuhi saat penyuntikan:*'+
+        '\n\n1. Kondisi sehat'+
+        '\n\n2. Berusia > 12 Tahun'+
+        '\n\n3. Tidak sedang demam (>37.5°C)'+
+        '\n\n4. Tekanan darah < 180/110 mmHg'+
+        '\n\n5. Tidak memiliki riwayat alergi berat'+
+        '\n\n6. Bagi yang memiliki riwayat asma dengan kondisi terkontrol'+
+        '\n\n7. Bagi yang memiliki riwayat penyakit berat dengan kondisi terkontrol'+
+        '\n\n8. Ibu hamil atau menyusui harus pada kondisi sehat'
+      );
+    }
+    else if (msg.body == '10') {
+      msg.reply('*Untuk melakukan pendaftaran mendapatkan vaksin dapat dilakukan dengan cara:*'+
+        '\n\n1. Pendaftaran vaksin gratis dapat dilakukan dengan mendatangi puskesmas atau rumah sakit terdekat'+
+        '\n\n2. Bagi masyarakat yang ingin mendapatkan vaksinasi segera tanpa menunggu bisa menghubungi rumah sakit tertentu untuk mendapatkan vaksin gotong royong atau pra bayar'
+      );
+    }
+    else if (msg.body == '11') {
+      msg.reply('*Terdapat beberapa efek samping vaksin / KIPI yang mungkin bisa terjadi:*'+
+        '\n\n1. Nyeri ringan pada bekas suntikan'+
+        '\n\n2. Sakit kepala atau nyeri otot dan sendi'+
+        '\n\n3. Menggigill'+
+        '\n\n4. Rasa lelah'+
+        '\n\n5. Demam hingga >37.5°C'
+      );
+    }
+    else if (msg.body == '12') {
+      msg.reply('*Terdapat beberapa cara yang bisa dilakukan untuk mengatasi efek samping vaksin / KIPI:*'+
+        '\n\n1. Untuk efek samping ringan tidak perlu datang ke fasilitas kesehatan atau nakes terdekat'+
+        '\n\n2. Untuk efek samping sedang sampai berat bisa mendatangi puskesmas, tempat fasilitas kesehatan terdekat atau menghubungi nomor yang tertera pada kartu vaksin'
+      );
+    }
+    else if (msg.body == '13') {
+      msg.reply('*Efek samping vaksin atau KIPI dapat dilaporkan dengan datang langsung ke puskesmas, rumah sakit terdekat, atau menghubungi nomor yang tertera pada kartu vaksin*'
+      );
+    }
+    else if (msg.body == '14') {
+      msg.reply('*Terdapat beberapa jenis vaksin yang sudah bisa digunakan:*'+
+        '\n\n1. CoronaVac'+
+        '\n\n2. Sinopharm'+
+        '\n\n3. AstraZeneca'+
+        '\n\n4. Moderna'
+      );
+    }
+    else if (msg.body == '15') {
+      msg.reply('*Terdapat beberapa kondisi yang menyebabkan penundaan atau pembatalan pemberian vaksin:*'+
+        '\n\n1. Kondisi sakit'+
+        '\n\n2. Berusia < 12 Tahun'+
+        '\n\n3. Sedang demam (>37.5°C)'+
+        '\n\n4. Tekanan darah > 180/110 mmHg'+
+        '\n\n5. Memiliki riwayat alergi berat'+
+        '\n\n6. Memiliki riwayat asma dengan kondisi tidak terkontrol'+
+        '\n\n7. Memiliki riwayat penyakit berat dengan kondisi tidak terkontrol'+
+        '\n\n8. Ibu hamil atau menyusui dengan kondisi tidak sehat atau tidak memenuhi syarat'
+      );
+    }
     else if (msg.body == 'Menu'){
       msg.reply('Silahkan balas dengan angka sesuai menu di bawah ini jika anda butuh informasi layanan lebih lanjut:'+
       '\n\n👉 Balas angka *1* jika anda ingin mengetahui kriteria orang yang harus menjalani isolasi mandiri'+
@@ -202,7 +259,14 @@ const db = require('./helpers/db.js');
       '\n\n👉 Balas angka *5* jika anda ingin mengetahui obat apa yang dapat dikonsumsi selama masa isolasi mandiri'+
       '\n\n👉 Balas angka *6* jika anda ingin mengetahui info edukasi terkait COVID-19'+
       '\n\n👉 Balas angka *7* jika anda mengalami sesak nafas atau gejala semakin memberat dan membutuhkan bantuan konsultasi tenaga medis'+
-      '\n\n👉 Balas angka *8* jika anda ingin mengetahui apa saja yang harus dilakukan setelah masa isolasi selesai / telah dinyatakan sembuh dari COVID-19'
+      '\n\n👉 Balas angka *8* jika anda ingin mengetahui apa saja yang harus dilakukan setelah masa isolasi selesai / telah dinyatakan sembuh dari COVID-19'+
+      '\n\n💉 Balas angka *9* jika anda ingin mengetahui syarat mendapatkan vaksin'+
+      '\n\n💉 Balas angka *10* jika anda ingin mengetahui cara mendaftarkan diri untuk mendapatkan vaksin'+
+      '\n\n💉 Balas angka *11* jika anda ingin mengetahui efek samping yang mungkin timbul dari vaksin / KIPI'+
+      '\n\n💉 Balas angka *12* jika anda ingin mengetahui cara mengatasi efek samping vaksin / KIPI'+
+      '\n\n💉 Balas angka *13* jika anda ingin mengetahui tata cara pelaporan efek samping vaksin atau KIPI'+
+      '\n\n💉 Balas angka *14* jika anda ingin mengetahui jenis vaksin yang sudah bisa digunakan'+
+      '\n\n💉 Balas angka *15* jika anda ingin mengetahui syarat terjadi penundaan atau pembatalan pemberian vaksin'
       );
     } else{
       msg.reply('Salam Sehat, selamat datang di *ISO KONSUL* COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. ISO KONSUL ini dibuat sebagai sarana informasi dan konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah.'+
