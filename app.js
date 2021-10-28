@@ -222,8 +222,8 @@ const db = require('./helpers/db.js');
     }
     else if (msg.body == '12') {
       msg.reply('*Terdapat beberapa cara yang bisa dilakukan untuk mengatasi efek samping vaksin / KIPI:*'+
-        '\n\n1. Untuk efek samping ringan tidak perlu datang ke fasilitas kesehatan atau nakes terdekat'+
-        '\n\n2. Untuk efek samping sedang sampai berat bisa mendatangi puskesmas, tempat fasilitas kesehatan terdekat atau menghubungi nomor yang tertera pada kartu vaksin'
+        '\n\n1. Untuk efek samping ringan seperti pusing, mual, nyeri pada bekas suntikan, kelelahan, dan demam (>37.5°C) tidak perlu datang ke fasilitas kesehatan atau nakes terdekat'+
+        '\n\n2. Jika keluhan berkelanjutan atau berat seperti sesak nafas, demam tinggi hingga kejang bisa mendatangi puskesmas, tempat fasilitas kesehatan terdekat, atau menghubungi nomor yang tertera pada kartu vaksin'
       );
     }
     else if (msg.body == '13') {
