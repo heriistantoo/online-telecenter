@@ -276,6 +276,10 @@ const db = require('./helpers/db.js');
 
   client.initialize();
 
+  // client.initialize().catch(err => {
+  //   console.log(err)
+  // })
+
   // Socket IO
   io.on('connection', function (socket) {
     socket.emit('message', 'Connecting...');
@@ -311,6 +315,9 @@ const db = require('./helpers/db.js');
       db.removeSession();
       client.destroy();
       client.initialize();
+      // client.initialize().catch(err => {
+      //   console.log(err)
+      // })
     });
   });
 
