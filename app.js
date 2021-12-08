@@ -269,7 +269,7 @@ const db = require('./helpers/db.js');
       '\n\n💉 Balas angka *15* jika anda ingin mengetahui syarat terjadi penundaan atau pembatalan pemberian vaksin'
       );
     } else{
-      msg.reply('Salam Sehat, selamat datang di *ISO KONSUL* COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. ISO KONSUL ini dibuat sebagai sarana informasi dan konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah.'+
+      msg.reply('Salam Sehat, selamat datang di *ISO KONSUL* COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. ISO KONSUL ini dibuat sebagai sarana informasi dan konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah dan informasi vaksinasi COVID-19.'+
       '\nBalas dengan pesan *Menu* untuk melihat daftar layanan.');
     }
   });
