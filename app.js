@@ -250,6 +250,19 @@ const db = require('./helpers/db.js');
         '\n\n8. Ibu hamil atau menyusui dengan kondisi tidak sehat atau tidak memenuhi syarat'
       );
     }
+    else if (msg.body == '16') {
+      msg.reply('*Ibu hamil BOLEH mendapatkan vaksin booster COVID-19 dengan beberapa ketentuan sebagai berikut:*' +
+        '\n\n1. Suhu tubuh di bawah 37.5°C' +
+        '\n\n2. Tekanan darah < 140/90 mmHg' +
+        '\n\n3. Usia kehamilan > 13 minggu' +
+        '\n\n4. Tidak memiliki keluhan seperti kaki bengkak, sakit kepala, nyeri ulu hati, atau pandangan kabur' +
+        '\n\n5. Jika memiliki penyakit penyerta (komorbid) harus dalam keadaan yang terkendali' +
+        '\n\n6. Tidak memiliki penyakit autoimun, jika mengidap penyakit autoimun tertentu, maka penyakitnya perlu dalam kondisi yang terkontrol' +
+        '\n\n7. Tidak sedang mendapatkan pengobatan untuk pembekuan darah, kelainan darah, defisiensi imun, atau sedang menjadi penerima transufsi darah' +
+        '\n\n8. Tidak sedang mendapatkan pengobatan immunosuppressant seperti kemoterapi atau kortikosteroid'+
+        '\n\n9. Tidak pernah terkonfirmasi COVID-19 dalam waktu 3 bulan terakhir'
+      );
+    }
     else if (msg.body == 'Menu'){
       msg.reply('Silahkan balas dengan angka sesuai menu di bawah ini jika anda butuh informasi layanan lebih lanjut:'+
       '\n\n👉 Balas angka *1* jika anda ingin mengetahui kriteria orang yang harus menjalani isolasi mandiri'+
@@ -266,7 +279,8 @@ const db = require('./helpers/db.js');
       '\n\n💉 Balas angka *12* jika anda ingin mengetahui cara mengatasi efek samping vaksin / KIPI'+
       '\n\n💉 Balas angka *13* jika anda ingin mengetahui tata cara pelaporan efek samping vaksin atau KIPI'+
       '\n\n💉 Balas angka *14* jika anda ingin mengetahui jenis vaksin yang sudah bisa digunakan'+
-      '\n\n💉 Balas angka *15* jika anda ingin mengetahui syarat terjadi penundaan atau pembatalan pemberian vaksin'
+      '\n\n💉 Balas angka *15* jika anda ingin mengetahui syarat terjadi penundaan atau pembatalan pemberian vaksin'+
+      '\n\n💉 Balas angka *16* jika anda ingin mengetahui syarat vaksin booster bagi ibu hamil'
       );
     } else{
       msg.reply('Salam Sehat, selamat datang di *ISO KONSUL* COVID-19 yang dikelola oleh Dinas Kesehatan Kabupaten Blitar. ISO KONSUL ini dibuat sebagai sarana informasi dan konsultasi yang diperuntukan bagi warga yang saat ini sedang menjalani isolasi mandiri COVID-19 di rumah dan informasi vaksinasi COVID-19.'+
