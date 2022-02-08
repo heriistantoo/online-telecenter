@@ -132,8 +132,7 @@ const db = require('./helpers/db.js');
       '\n\n*PUSKESMAS BORO*'+
       '\n\n1. dr. Zuniarsih ☎️ 085649440150'+
       '\n\n*PUSKESMAS DOKO*'+
-      '\n\n1. dr. Anggrita ☎️ 081553636000'+
-      '\n2. dr. Eko ☎️ 081328578032'+
+      '\n\n1. dr. Eko ☎️ 081328578032'+
       '\n\n*PUSKESMAS GANDUSARI*'+
       '\n\n1. dr. Muhammad Farid ☎️ 082231922108'+
       '\n2. dr. Vladimir ☎️ 08113291992'+
@@ -156,7 +155,7 @@ const db = require('./helpers/db.js');
       '\n\n1. dr. Rabitha ☎️ 085871189997'+
       '\n2. dr. Inaka ☎️ 082141117800'+
       '\n\n*PUSKESMAS SANANKULON*'+
-      '\n\n1. dr. Evi ☎️ 087753810268'+
+      '\n\n1. dr. Anna ☎️ 081327016666'+
       '\n\n*PUSKESMAS SELOPURO*'+
       '\n\n1. dr. Adi ☎️ 08123310818'+
       '\n\n*PUSKESMAS SLUMBUNG*'+
