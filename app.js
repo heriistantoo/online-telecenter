@@ -137,8 +137,7 @@ const db = require('./helpers/db.js');
       '\n\n1. dr. Muhammad Farid ☎️ 082231922108'+
       '\n2. dr. Vladimir ☎️ 08113291992'+
       '\n\n*PUSKESMAS GARUM*'+
-      '\n\n1. dr. Arne ☎️ 081334767659'+
-      '\n2. dr. Arsinta ☎️ 082134868365'+
+      '\n\n1. dr. Arsinta ☎️ 082134868365'+
       '\n\n*PUSKESMAS KADEMANGAN*'+
       '\n\n1. dr. Silvia ☎️ 08563085300'+
       '\n2. dr. Rurin ☎️ 085731950306'+
